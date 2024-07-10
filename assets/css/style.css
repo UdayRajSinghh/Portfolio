@@ -162,7 +162,7 @@ html {
 }
 
 body {
-background-color: hsl(0, 0%, 9%);  
+  background-color: hsl(0, 0%, 9%);
 }
 
 
@@ -215,7 +215,7 @@ article {
   z-index: -1;
 }
 
-.icon-box:hover{
+.icon-box:hover {
   font-size: 30px;
 }
 
@@ -223,7 +223,7 @@ article {
   --ionicon-stroke-width: 35px;
 }
 
-#fb:hover{
+#fb:hover {
   color: rgb(233, 236, 240);
 }
 
@@ -232,9 +232,9 @@ article {
 color: rgb(0, 225, 255);
 } */
 
-#linked:hover{
+#linked:hover {
   color: rgb(0, 68, 255);
-  }
+}
 
 article {
   display: none;
@@ -399,7 +399,7 @@ main {
   width: max-content;
   padding: 3px 12px;
   border-radius: 8px;
-  box-shadow: 0px 0px 2px 3px hsl(45, 54%, 28%) ;
+  box-shadow: 0px 0px 2px 3px hsl(45, 54%, 28%);
 }
 
 /* .info-content .title:hover {
@@ -504,7 +504,7 @@ main {
   gap: 15px;
   padding-bottom: 4px;
   padding-left: 7px;
-  
+
 }
 
 .social-item .social-link {
@@ -532,24 +532,24 @@ main {
 
 .email-container:hover .email {
   animation-play-state: running;
-  animation: slide 5s ease-in-out infinite;
+  animation: slide2 7s infinite;
 }
 
 .email-container:not(:hover) {
   text-overflow: ellipsis;
 }
 
-@keyframes slide {
+@keyframes slide2 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(0%, 0);
   }
 
   50% {
-    transform: translate(-33%, 0);
+    transform: translate(-31.5%, 0);
   }
 
   100% {
-    transform: translate(0, 0);
+    transform: translate(1%, 0%);
   }
 }
 
@@ -589,7 +589,7 @@ main {
 .navbar-link:hover,
 .navbar-link:focus {
   color: var(--orange-yellow-crayola);
-  text-shadow:5px 5px 30px hsl(53, 97%, 71%);
+  text-shadow: 5px 5px 30px hsl(53, 97%, 71%);
   -moz-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
@@ -868,8 +868,8 @@ main {
  * #clients 
  */
 
- .clients {
-  margin-bottom: 15px;
+.clients {
+  margin-bottom: -10px;
   overflow: hidden;
 }
 
@@ -885,7 +885,8 @@ main {
   align-items: center;
   padding: 25px 0;
   width: 33.333%;
-  flex-shrink: 0; /* Prevent the list from shrinking */
+  flex-shrink: 0;
+  /* Prevent the list from shrinking */
 }
 
 .clients-item {
@@ -902,16 +903,32 @@ main {
   filter: grayscale(1);
 }
 
+.clients-item svg {
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+  transition: all 0.3s ease;
+  filter: grayscale(1);
+}
+
 @keyframes slide {
   0% {
     transform: translateX(0);
   }
-  100% {  
-    transform: translateX(-66.666%); /* Move two full lists */
+
+  100% {
+    transform: translateX(-66.666%);
+    /* Move two full lists */
   }
 }
 
 .clients-item img:hover {
+  transform: scale(1.2);
+  filter: grayscale(0);
+  z-index: 1;
+}
+
+.clients-item svg:hover {
   transform: scale(1.2);
   filter: grayscale(0);
   z-index: 1;
@@ -922,8 +939,9 @@ main {
 }
 
 /* Add space between lists */
-.clients-list + .clients-list {
-  margin-left: 13.333%; /* Add a full list width as margin */
+.clients-list+.clients-list {
+  margin-left: 13.333%;
+  /* Add a full list width as margin */
 }
 
 
@@ -1058,27 +1076,34 @@ main {
   cursor: pointer;
   border-radius: 10px;
   font-size: 20px;
-  margin-left: 40%;
+  margin-left: 43%;
   margin-top: 50px;
+  width: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  transition: all 0.3s ease; /* This adds the smooth transition */
+  transition: all 0.3s ease;
+  /* This adds the smooth transition */
   box-shadow: 0px 0px 2px 3px hsl(45, 54%, 28%)
 }
 
 .btn:hover {
-  background-color: hsl(45, 82%, 52%); /* Darker shade for hover */
-  transform: scale(1.1); /* Slightly increase size on hover */
+  background-color: hsl(45, 82%, 52%);
+  /* Darker shade for hover */
+  transform: scale(1.1);
+  /* Slightly increase size on hover */
 }
 
 .btn i {
-  transition: transform 0.3s ease; /* Smooth transition for icon */
+  transition: transform 0.3s ease;
+  /* Smooth transition for icon */
 }
 
-.btn:hover i {
-  transform: scale(1.1); /* Increase icon size on hover */
+.btn:hover ion-icon {
+  transform: scale(1.3);
+  /* Increase icon size on hover */
+  transition: 0.5s all;
 }
 
 .anchor {
@@ -1127,6 +1152,10 @@ main {
   z-index: 2;
   transition: all 1s ease;
 }
+
+
+
+
 
 
 /*-----------------------------------*\
